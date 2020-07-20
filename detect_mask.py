@@ -109,8 +109,6 @@ while True:
         # the bounding box and text
         label = "Mascara" if mask > withoutMask else "Sem Mascara"
         color = (0, 255, 0) if label == "Mascara" else (0, 0, 255)
-        if label == "Sem Mascara":
-            print("\a")
 
         # include the probability in the label
         label = "{}: {:.2f}%".format(label, max(mask, withoutMask) * 100)
